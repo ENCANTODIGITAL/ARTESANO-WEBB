@@ -1,0 +1,5 @@
+.carousel-item img {
+    width: 300px; /* Ancho de cada imagen */
+    height: auto; /* Mantener la proporción de aspecto */
+  }
+  

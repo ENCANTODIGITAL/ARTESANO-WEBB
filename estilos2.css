@@ -1,0 +1,1677 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Freeman&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    text-decoration: none;
+    padding: 0%;
+    margin: 0%;
+}
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+
+/* Estilos para el encabezado */
+
+.hero-frase {
+    background: linear-gradient(135deg, #000000, #1a1a1a);
+    color: #f4f4f4;
+    text-align: center;
+    padding: 50px 20px;
+    font-family: 'Playfair Display', serif;
+    
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+.hero-frase h1{
+  font-size: 3rem;
+}
+
+
+.header-principal {
+    
+    
+    background-color: #333; /* Color de fondo del encabezado */
+    color: #fff; /* Color del texto */
+    padding: 10px 100px 10px 80px; /* Espaciado interno */
+    display: flex; /* Mostrar elementos en línea */
+    justify-content: space-between; /* Distribuir los elementos horizontalmente */
+    align-items: center; /* Centrar verticalmente los elementos */
+    
+     
+
+    /*aqui se modifico*/
+}
+
+
+
+
+
+/* Estilos para el logo */
+#logo {
+    width: 400px; /* Ancho del logo */
+    height: auto; /* Altura automática para mantener la proporción */
+}
+
+/* Estilos para la frase de la empresa */
+#slogan {
+transform: translate(90px,0px);
+display: flex;
+align-items: center;
+font-family: "Merriweather", serif;
+font-weight: 300;
+font-style: normal;
+
+
+
+
+
+
+
+
+}
+/*libro de reclamaciones*/
+
+
+
+
+
+.frase-reclamaciones {
+    background: linear-gradient(135deg, #fbe16b, #1a1a1a);
+    color: #f4f4f4;
+    text-align: center;
+    padding: 50px 20px;
+    font-family: 'Playfair Display', serif;
+    
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+.frase-reclamaciones h1{
+  font-size: 5rem;
+}
+
+.header-reclamaciones {
+    
+    height: 250px;
+    background-color: #333; /* Color de fondo del encabezado */
+    color: #fff; /* Color del texto */
+    padding: 10px 100px 10px 80px; /* Espaciado interno */
+    display: flex; /* Mostrar elementos en línea */
+    justify-content: space-between; /* Distribuir los elementos horizontalmente */
+    align-items: center; /* Centrar verticalmente los elementos */
+    
+     
+
+    /*aqui se modifico*/
+}
+/*seccion libro de reclamaciones*/
+#foto-reclamciones {
+transform: translate(90px,0px);
+display: flex;
+align-items: center;
+font-family: "Merriweather", serif;
+font-weight: 300;
+font-style: normal;
+    
+}
+#foto-reclamo{
+    width: 400px; /* Ancho del logo */
+    height: auto; /* Altura automática para mantener la proporción */
+}
+
+
+
+
+
+
+
+.libro-reclamaciones {
+  background-color: #fff8dc;
+  color: #333;
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  max-width: 800px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+.libro-reclamaciones h2 {
+  color: #c49b0b;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+fieldset {
+  border: none;
+  margin-bottom: 2rem;
+}
+
+legend {
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.tipo-reclamo {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.aceptacion {
+  margin-top: 1rem;
+}
+
+button {
+  background-color: #c49b0b;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  margin: 2rem auto 0;
+}
+
+button:hover {
+  background-color: #b58f0a;
+}
+
+
+
+
+.error-msg {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 0.2rem;
+  display: block;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-contenido {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.cerrar-modal {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+}
+/*
+#sa{
+    transform: translate(80px, 0px);
+    font-size: 30px;
+    
+    
+}
+*/
+/* Estilos para los botones de navegación */
+nav {
+
+    padding: 0px 0px 0px 100px;
+}
+
+nav a {
+    color: rgb(41, 168, 206);
+    
+    margin-left: 30px; /* Espacio entre los botones */
+}
+#botonesinicio{
+    
+        font-size: 30px;
+        color: rgb(41, 168, 206);
+        text-decoration: none;
+        margin: 14px 30px;
+    }
+
+
+
+#main-box {
+    background-color: #221f1f;
+    text-align: center;
+    padding: 20px 0;
+}
+
+#image-container {
+    text-align: center;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#image-slider {
+    width: 100vw;
+    position: relative;
+    display: flex;
+    transition: transform 0.5s ease;
+    align-items: center;
+    justify-content: center;
+}
+/**/
+.slider-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: none;
+}
+
+/**/
+.slider-img {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+
+
+#prev, #next {
+    font-size: 48px;
+    cursor: pointer;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}
+
+#slider-dots {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.slider-dot {
+    width: 20px;
+    height: 20px;
+    background-color: #fcf8f8;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+}
+/* desde aca empieza la reseña */
+.reasons-to-choose {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh ;
+    background-color: #333;
+    padding: 200px 40px;
+    text-align: left;
+    color: rgb(251, 241, 241);
+    position: relative;
+    z-index: 1;
+    border: 10px solid #000;
+    overflow: hidden;
+}
+
+
+/* 🎯 Carrusel pequeño: estilos para todos los carruseles mini */
+.mini-carousel-box {
+  width: 500px;
+  height: 800px;
+  margin: 20px auto;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.mini-image-slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.mini-slider-img {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.mini-slider-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mini-prev, .mini-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  color: white;
+  background: rgba(0,0,0,0.3);
+  padding: 5px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.mini-prev { left: 5px; }
+.mini-next { right: 5px; }
+
+.mini-slider-dots {
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  text-align: center;
+}
+
+.mini-slider-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 3px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.mini-slider-dot.active {
+  background-color: #333;
+}
+/* ✅ Fin de mini carrusel */
+
+
+
+
+
+
+
+
+
+/* Estilos para el texto de los encabezados */
+.reasons-to-choose h2 {
+    font-size: 50px; /* Tamaño de letra para los encabezados */
+    padding:0px 0 40px 40px ;
+    
+
+    font-family: "Freeman", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+/* p de reason text  */
+
+.reasons-text p {
+    font-size: 24px; /* Tamaño de letra para los párrafos */
+    text-align: justify;
+   
+    line-height: 1.4; /* Ajusta este valor según tus necesidades */
+    padding: 0px 15px 0px 35px;
+    
+   
+    
+}
+.reasons-text p.p-negrita {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+
+#reasons-image img {
+    max-width: 600px; /* Establece el ancho máximo de la imagen al 100% del contenedor */
+}
+
+#reasons-text {
+    flex-basis: calc(50% - 20px); /* 60% del ancho menos 20px de margen */
+    margin-right: 20px;
+}
+/*                   Carusel                      */
+#carousel{
+    height: 100vh;
+    background-color: #07101a;
+
+
+}
+#carousel h2{
+    color: #f2eaea;
+    font-size: 50px; /* Tamaño de letra para los encabezados */
+    padding:75px 0 75px 400px ;
+    
+
+    font-family: "Freeman", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+
+
+.carousel-item{
+   
+    background-color: #f6efef;
+    height:  50vh;
+
+}
+.carousel-item img{
+    margin: 20px;
+    width: 400px 300px; /* Ancho de cada imagen */
+    height:  40vh;/* Mantener la proporción de aspecto */
+}
+
+
+
+
+/*footer*/
+/*color del cuadro*/
+.footer-creative {
+  background-color: #333;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.footer-logo-text {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+}
+
+.footer-logo-img {
+  width: 600px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.footer-title {
+  font-size: 60px;
+  color: #33c6e0;
+  margin: 0;
+}
+
+.footer-c1 p {
+  font-size: 30px;
+  color: aliceblue;
+  line-height: 1.5;
+  flex: 1;
+  padding: 20px;
+}
+
+
+
+
+
+
+/* Imagen del botón */
+.footer-button-img {
+  width: 200px;
+  height: auto;
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  display: block;
+  margin-top: 15px;
+}
+
+.footer-button-img:hover {
+  transform: scale(1.05);
+}
+
+
+
+  
+/*COLOR E LAS LETRAS SLIDER */
+
+.slider-text {
+  
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    color: rgb(8, 29, 162);
+    text-align: center;
+    max-width: 80%;
+    border-radius: 100px;
+    background-color: rgba(255, 255, 255, 0.6);
+    
+}
+
+.slider-text h3 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.slider-text p {
+    font-size: 30px;
+    margin: 0;
+}
+.footer-c1 {
+  transform: translate(10px, -50px); /* 20px a la derecha, 10px hacia arriba */
+}
+
+
+/*boton de wasap*/
+.whatsapp-fixed {
+  position: fixed;
+  bottom: 40px;   /* Más arriba: aumenta el número */
+  right: 40px;    /* Más a la izquierda: aumenta el número */
+  z-index: 1100;
+}
+
+.whatsapp-fixed img {
+  width: 80px;
+  height: 80px; /* ← Esto lo hace visible */
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.whatsapp-fixed img:hover {
+  transform: scale(1.1);
+}
+
+
+
+
+
+
+/* 🔘 Botón flotante que abre el chatbot */
+/* 🔘 Botón flotante que abre el chatbot */
+#chat-toggle {
+  position: fixed;
+  bottom: 50px;
+  right: 40px;
+  background: transparent;
+  border: none;
+  z-index: 999;
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 🖼️ Imagen dentro del botón del chatbot */
+#chat-toggle img {
+  width: 60px !important;
+  height: 60px !important;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+
+
+
+/* 💬 Contenedor del chatbot que aparece al hacer clic */
+#chatbot-container {
+  position: fixed;
+  bottom: 40px;
+  right: 220px; /* ← Lo alejamos del botón */
+  width: 300px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  font-family: sans-serif;
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 998;
+}
+
+
+/* 🟪 Encabezado del chatbot */
+#chat-header {
+  background: #6C63FF;     /* Color de fondo del encabezado */
+  color: white;            /* Texto blanco */
+  padding: 10px;           /* Espaciado interno */
+  font-weight: bold;       /* Texto en negrita */
+}
+
+/* 📜 Área donde se muestran los mensajes del chat */
+#chat-log {
+  padding: 10px;           /* Espaciado interno */
+  height: 200px;           /* Altura fija del área de mensajes */
+  overflow-y: auto;        /* Permite hacer scroll si hay muchos mensajes */
+}
+
+/* 🧾 Área de entrada de texto y botón de envío */
+#chat-input {
+  display: flex;           /* Organiza el input y el botón en fila */
+  border-top: 1px solid #ccc; /* Línea divisoria superior */
+}
+
+/* ✏️ Campo donde el usuario escribe su pregunta */
+#chat-input input {
+  flex: 1;                 /* Ocupa todo el espacio disponible */
+  padding: 10px;           /* Espaciado interno */
+  border: none;            /* Sin borde */
+}
+
+/* 📤 Botón para enviar el mensaje */
+#chat-input button {
+  background: #6C63FF;     /* Color de fondo del botón */
+  color: white;            /* Texto blanco */
+  border: none;            /* Sin borde */
+  padding: 10px;           /* Espaciado interno */
+  cursor: pointer;         /* Cursor tipo mano al pasar el mouse */
+}     
+/* 🔘 Botón flotante que abre el chatbot */
+#chat-toggle {
+  position: fixed;
+  bottom: 200px;
+  right: 40px;
+  background: transparent;
+  border: none;
+  z-index: 999;
+  cursor: pointer;
+  width: 160px;
+  height: 160px;
+}
+
+/* 🖼️ Imagen dentro del botón del chatbot */
+#chat-toggle img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+/*grid deslizantes*/
+.banner-grid {
+  padding: 2rem;
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+}
+
+.grid-slider {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(250px, 1fr);
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 1rem 0;
+}
+
+.grid-item {
+  scroll-snap-align: start;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  border: 2px solid #D4AF37;
+}
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*       NOSOTROS APARTIR DE LA IMAGEN RECTANGULAR HASTA ANTES DEL FOOTER*/
+
+
+
+
+.nosotros {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem;
+}
+
+.bloque {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.bloque:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.texto {
+  flex: 1;
+  background-color: #f2f2f2; /* gris suave */
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.texto h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.texto p {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: #444;
+  white-space: pre-line;
+}
+
+.imagen {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagen img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+/*
+#image-container1 {
+    text-align: center;
+    position: relative;
+    height: 30vh;
+    overflow: hidden;
+}
+#us-section {
+    border: 2px solid rgb(34, 135, 202);
+    background-color: #333;
+    color: white;
+    padding: 0;
+    
+    text-align: center;
+}
+
+#reviews-box {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: #333;
+    padding: 0px;
+    text-align: center;
+}
+
+#review-text {
+    width: 40%;
+    padding:100px 70px 40px 80px;
+    font-size: 18px;
+    float: left;
+    text-align: left;
+    color: rgb(255, 255, 255); 
+    /* Cambia el color del texto a negro */
+
+/*    
+}#review-text h2{
+    
+    
+    font-size: 30px;
+    padding: 0px 0 25px 0;
+  
+    /* Cambia el color del texto a negro */
+/*}
+
+#review-image {
+    width: 35%;
+    padding: 100px 160px 100px 40px;
+    float: right;
+    margin-top: 20px;
+}
+
+
+
+
+/*
+
+/* Carrusel */
+#carousel {
+  height: 60vh;
+  background-color: #07101a;
+}
+
+#carousel h2 {
+  color: #f2eaea;
+  font-size: 50px;
+  padding: 40px;
+  font-family: "Freeman", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center; /* centrado por defecto */
+}
+
+.carousel-item {
+  background-color: #f6efef;
+  min-height: 50vh; /* altura flexible */
+}
+
+.carousel-item img {
+  margin: 10px auto;
+  max-height: 40vh;
+  object-fit: contain; /* mantiene proporción */
+}
+
+
+
+
+
+
+
+/*                              SERVIVIOS                      */
+.servicios-grid {
+  padding: 3rem 2rem;
+  background-color: #111; /* fondo oscuro */
+  color: #f2f2f2;
+  text-align: center;
+}
+
+.titulo-servicios {
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.subtitulo-servicios {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 2rem;
+}
+
+.bloques-servicios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.bloque {
+  background-color: #1a1a1a;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: left;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.2); /* dorado suave */
+  transition: transform 0.3s ease;
+}
+
+.bloque:hover {
+  transform: translateY(-5px);
+}
+
+.bloque h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #D4AF37; /* dorado */
+}
+
+.bloque ul {
+  list-style: none;
+  padding: 0;
+}
+
+.bloque ul li {
+  font-size: 1.1rem;
+  color: #ddd;
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.bloque ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #D4AF37;
+}
+
+/*cuadritos con imagenes seccion grid*/
+
+.servicios {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.titulo-servicios {
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitulo-servicios {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.grid-servicios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background-color: #f2f2f2;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+
+/*final de servicios*/
+
+.cta-servicios {
+  background: linear-gradient(135deg, #111 0%, #222 100%);
+  padding: 3rem 2rem;
+  text-align: center;
+  color: #fff;
+  margin-top: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.3); /* dorado suave */
+}
+
+.cta-contenido p {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  color: #f2f2f2;
+}
+
+.boton-cta {
+  display: inline-block;
+  background-color: #D4AF37; /* dorado */
+  color: #111;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.boton-cta:hover {
+  background-color: #fff;
+  color: #D4AF37;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+}
+
+        /* Estilos para el menú desplegable 
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 5px;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+            
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .button {
+            background-color: #0056b3;
+        }
+
+         Estilos para el contenido adicional */
+/*
+        #us-section1 {
+            background-color:#3c3c3c; 
+            color: white;
+            padding: 20px;
+            text-align: center;
+            height: 85vh;
+        }
+        #us-section12 {
+            background-color: #3c3c3c;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            height: 85vh;
+        }
+
+        #reviews-box1 {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            background-color: #e3e3e3;
+            padding: px 0 0 0;
+            text-align: center;
+            
+        }
+        
+
+        #review-text1 {
+            width: 40%;
+            
+            float: left;
+            text-align: left;
+            color: rgb(59, 107, 212); /* Cambia el color del texto a negro */
+                 
+        /*}
+        #cajadeservicios{
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            background-color: #971111;
+            padding: px 0 0 0;
+            text-align: center;
+            
+        }
+        #cuadrodetexto{
+            width: 40%;
+            
+            float: left;
+            text-align: left;
+            color: rgb(59, 107, 212); /* Cambia el color del texto a negro */
+                 
+        /*}
+        
+
+
+
+
+
+
+        #review-text1 h2{
+            font-size: 60px;
+            padding: 80px 0px 20px 120px;
+        }
+        #review-text1 p{
+            font-size: 20px;
+            padding: 10px 0px 80px 100px;
+        }
+
+        #review-image1 {
+            width: 530px;
+            float: right ;
+            margin-top: 40px;
+            margin-right: 100px;
+            border: 5px solid rgb(255, 255, 255); /* Ajusta el grosor del borde según tus necesidades */
+           /* padding: 10px; /* Espacio entre la imagen y el borde */
+          /*  background-color: rgba(255, 255, 255, 0.486);*/
+
+
+
+
+
+/*contactano*/
+.contacto {
+  padding: 3rem 2rem;
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  border-radius: 12px;
+  margin-top: 3rem;
+}
+
+.form-contacto {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-contacto label {
+  text-align: left;
+  font-weight: bold;
+  color: #D4AF37; /* dorado */
+}
+
+.form-contacto input,
+.form-contacto textarea,
+.form-contacto select {
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  background-color: #f2f2f2;
+  color: #111;
+}
+
+.boton-enviar {
+  background-color: #D4AF37;
+  color: #111;
+  font-weight: bold;
+  padding: 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.boton-enviar:hover {
+  background-color: #fff;
+  color: #D4AF37;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+}
+
+.privacidad {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+}
+
+.modal-contenido {
+  background: #222;
+  color: #fff;
+  margin: 10% auto;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 600px;
+}
+
+.cerrar {
+  float: right;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.boton-whatsapp {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background-color: #25D366;
+  color: #fff;
+  font-weight: bold;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.boton-whatsapp:hover {
+  background-color: #128C7E;
+}
+/* Mensajes de error debajo de los campos */
+.error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+  display: block;
+}
+
+
+/* Modal de éxito */
+#modal-exito .modal-contenido {
+  background: #fff;
+  color: #111;
+  text-align: center;
+}
+
+#modal-exito h3 {
+  color: #25D366; /* verde estilo WhatsApp */
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .form-contacto {
+    padding: 1rem;
+  }
+}
+
+/*footer*/
+.footer {
+  background-color: #111;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+  border-top: 3px solid #D4AF37; /* dorado */
+}
+
+.footer-contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.footer-logo img {
+  max-width: 120px;
+  margin-bottom: 0.5rem;
+}
+
+.footer-redes {
+  display: flex;
+  gap: 1rem;
+}
+
+.icono-red {
+  width: 32px;   /* tamaño pequeño */
+  height: 32px;
+  transition: transform 0.3s;
+}
+
+.icono-red:hover {
+  transform: scale(1.1); /* efecto hover */
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline; /* 🔑 asegura que todos los links se alineen por la base del texto */
+}
+
+.footer-links a {
+  color: #D4AF37;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-flex;     /* 🔑 fuerza ícono + texto en línea */
+  align-items: baseline;    /* 🔑 mantiene texto a la par de la imagen */
+  gap: 0.5rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.icono-libro {
+  height: 80px; /* tamaño grande */
+  width: auto;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+.footer-ruc {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+        
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 20px;
+    height: auto;
+    text-align: center;
+  }
+
+
+  nav {
+    display: flex;
+    flex-direction: column;   /* Uno encima del otro */
+    align-items: center;      /* Centrados horizontalmente */
+    padding: 0;               /* Elimina empuje lateral */
+  }
+
+  nav a {
+    margin: 10px 0;           /* Espaciado vertical entre enlaces */
+    font-size: 20px;          /* Tamaño cómodo para móvil */
+    text-decoration: none;
+    color: rgb(41, 168, 206);
+  }
+
+  #botonesinicio {
+    margin: 0;
+    font-size: 22px;
+    text-align: center;
+  }
+
+
+  #logo {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+
+  #slogan {
+    transform: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #sa {
+    transform: none;
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  #image-container,
+  .slider-img {
+    height: auto;
+  }
+
+  .slider-text {
+    position: static;
+    transform: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 20px;
+    margin: 10px auto;
+  }
+
+  .slider-text h3 {
+    font-size: 24px;
+  }
+
+  .slider-text p {
+    font-size: 18px;
+  }
+
+  .mini-carousel-box {
+    width: 90%;
+    height: auto;
+  }
+
+  .reasons-to-choose {
+    flex-direction: column;
+    padding: 40px 20px;
+    height: auto;
+
+  }
+
+  #reasons-text {
+    margin-right: 0;
+    flex-basis: 100%;
+  }
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  .footer-logo-text {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .footer-logo-img {
+    width: 90%;
+    height: auto;
+  }
+
+  .footer-title {
+    font-size: 30px;
+  }
+
+  .footer-c1 p {
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+  }
+
+
+  #chat-toggle,
+  .whatsapp-fixed img {
+    width: 60px;
+    height: 60px;
+  }
+
+  #chatbot-container {
+    right: 10px;
+    bottom: 110px;
+    width: 90%;
+  }
+
+  #review-text,
+  #review-text1,
+  #cuadrodetexto {
+    width: 100%;
+    float: none;
+    padding: 20px;
+    text-align: center;
+  }
+
+  #review-image,
+  #review-image1 {
+    width: 100%;
+    float: none;
+    margin: 20px auto;
+    padding: 10px;
+  }
+
+  #carousel h2 {
+    padding: 20px;
+    font-size: 28px;
+  }
+
+  .carousel-item img {
+    width: 90%;
+    height: auto;
+  }
+  .slider-img {
+  flex-direction: column;
+}
+
+.slider-img img {
+  width: 100%;
+  height: auto;
+  max-height: 60vh;
+  object-fit: cover;
+  transform: none;
+}
+
+  .bloque {
+    flex-direction: column !important; /* fuerza texto arriba, imagen abajo */
+    text-align: center;
+  }
+
+  .texto {
+    padding: 1.5rem;
+  }
+
+  .texto h2 {
+    font-size: 2rem;
+  }
+
+  .texto p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+
+  .imagen img {
+    width: 100%;
+    max-width: none;
+    border-radius: 12px;
+  }
+    .form-contacto {
+    padding: 1rem;
+  }
+
+  .form-contacto label {
+    font-size: 1rem;
+  }
+
+  .form-contacto input,
+  .form-contacto textarea,
+  .form-contacto select {
+    font-size: 1rem;
+  }
+  .libro-link {
+    flex-direction: column-reverse; /* texto arriba, imagen debajo */
+    align-items: center;            /* centra ambos elementos */
+    gap: 0.3rem;
+    text-align: center;             /* centra el texto */
+  }
+
+  .icono-libro {
+    height: 40px;                   /* tamaño compacto en móvil */
+    width: auto;
+    margin: 0 auto;                 /* 🔑 centra la imagen horizontalmente */
+    display: block;                 /* asegura que se comporte como bloque */
+  }
+}
+
+
+
+
+
+ 
+@media screen and (max-width: 768px) {
+  .mini-slider-img {
+    position: static;
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .mini-slider-img img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* o cover si quieres que se recorte pero llene */
+  }
+
+  .mini-carousel-box {
+    height: auto;
+    max-height: none;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .mini-slider-img {
+    position: static;
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .mini-slider-img img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* o cover si quieres que se recorte pero llene */
+  }
+
+  .mini-carousel-box {
+    height: auto;
+    max-height: none;
+  }
+}
+

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENCANTO DIGITAL
+
+    </title>
+    <link rel="stylesheet" href="estilos2.css">
+    <!-- Favicon para navegadores y buscadores -->
+    <link rel="icon" href="https://encantodigitalweb.com/FOTOS/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="https://encantodigitalweb.com/FOTOS/favicon.ico" sizes="48x48" type="image/png">
+    <!--carrusel-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+</head>
+
+
+<body>
+
+    <header class="header-reclamaciones">
+
+        
+        <!-- Logo de la empresa -->
+        
+
+        <!-- Frase de la empresa -->
+        <div id="slogan">
+        <img src="FOTOS/logotipodigital-removebg-preview.png" alt="Logo de la empresa" id="logo">
+        <!--<div id="sa">
+            "Invitaciones digitales que hacen cada momento único.”</div>
+        </div>-->
+
+        
+        <nav id="botonesinicio">
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="contacanos.html">Contactanos</a>
+            <a href="ayudamos.html">Ayudamos a hacer crecer  </a>
+        </nav>
+          <!-- Sección emocional destacada -->
+
+
+    
+    </header>
+          <!-- Sección emocional destacada -->
+
+<section class="libro-reclamaciones">
+  <h2>Libro de Reclamaciones (Ley 29571)</h2>
+  <p>Conforme al Código de Protección y Defensa del Consumidor, este establecimiento cuenta con un Libro de Reclamaciones a su disposición.</p>
+
+  <form>
+    <fieldset>
+      <legend>Datos Personales</legend>
+
+      <label>DNI:</label>
+      <input type="text" id="dni" required maxlength="8" inputmode="numeric" title="Ingrese solo 8 números">
+      <span class="error-msg"></span>
+
+      <label>Nombre:</label>
+      <input type="text" id="nombre" required maxlength="40">
+      <span class="error-msg"></span>
+
+      <label>Apellido paterno:</label>
+      <input type="text" id="apellido-paterno" required maxlength="40">
+      <span class="error-msg"></span>
+
+      <label>Apellido materno:</label>
+      <input type="text" id="apellido-materno" required maxlength="40">
+      <span class="error-msg"></span>
+    </fieldset>
+
+    <fieldset>
+      <legend>Datos para el envío de respuesta</legend>
+
+      <label>Email:</label>
+      <input type="email" id="email" required>
+      <span class="error-msg"></span>
+
+      <label>Teléfono fijo:</label>
+      <input type="tel" id="fijo" maxlength="7">
+      <span class="error-msg"></span>
+
+      <label>Celular:</label>
+      <input type="tel" id="celular" required maxlength="9">
+      <span class="error-msg"></span>
+
+      <label>Dirección:</label>
+      <input type="text" id="direccion" required maxlength="80">
+      <span class="error-msg"></span>
+    </fieldset>
+
+    <fieldset>
+      <legend>Detalle de la queja o reclamo</legend>
+
+      <label>Tienda donde fue atendido:</label>
+      <select id="tienda" required>
+        <option>Página web</option>
+      </select>
+      <span class="error-msg"></span>
+
+      <label>Monto del reclamo (S/.):</label>
+      <input type="text" id="monto" maxlength="8">
+      <span class="error-msg"></span>
+
+      <label>Tema:</label>
+      <input type="text" id="tema" required maxlength="100">
+      <span class="error-msg"></span>
+
+      <label>Descripción del producto adquirido:</label>
+      <textarea id="descripcion" rows="2" maxlength="600"></textarea>
+      <span class="error-msg"></span>
+
+      <label>Detalle de tu reclamo:</label>
+      <textarea id="detalle" rows="3" maxlength="5000"></textarea>
+      <span class="error-msg"></span>
+
+      <label>Pedido:</label>
+      <textarea id="pedido" rows="2" maxlength="5000"></textarea>
+      <span class="error-msg"></span>
+    </fieldset>
+
+    <div class="aceptacion">
+        <input type="checkbox" required>
+            He leído y acepto la <a href="#" id="abrir-modal">Política de privacidad</a>.
+
+    </div>
+   
+
+
+    <button type="submit">ENVIAR</button>
+  </form>
+</section>
+<!--modal oculto-->
+    <div id="modal-privacidad" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar-modal" id="cerrar-modal">&times;</span>
+        <h3>Política de Privacidad – Libro de Reclamaciones</h3>
+        <p>Mediante la presente se informa que sus datos serán almacenados en el banco de datos denominado “Libro de Reclamaciones”. Su información podrá ser compartida con terceros. Finalmente, se le informa que su autorización es necesaria para cumplir con las finalidades antes indicadas.</p>
+    </div>
+    </div>
+
+<!-- Enlace al JS -->
+<script src="validaciones.js"></script>
+
+    
+    <footer class="footer-creative">
+    <div class="footer-content">
+        <div class="footer-animation">
+        <!-- Logo de la empresa -->
+        <img src="FOTOS/logotipodigital-removebg-preview.png" alt="Logo de la empresa" class="footer-logo-img">
+        </div>
+
+        <div class="footer-c1">
+            
+        <h3 class="footer-title">¡💌 Invitaciones que hablan por ti!</h3>
+            <p>
+            Creamos invitaciones digitales únicas y personalizadas.<br>
+            Envíanos tu idea, estilo o referencia…<br>
+            y la convertimos en una experiencia interactiva.<br>
+            Tu celebración merece algo inolvidable.
+            </p>
+
+        </div>
+    </div>
+    </footer>
+  
+</body>
+</html>
