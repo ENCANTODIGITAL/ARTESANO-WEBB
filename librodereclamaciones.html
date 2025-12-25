@@ -251,6 +251,38 @@
   </section>
     </div>
     </div>
+  <!-- Modal de confirmación -->
+<div id="modal-exito" class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar" onclick="cerrarModalExito()">&times;</span>
+    <h3>✅ Mensaje enviado</h3>
+    <p>Muchas gracias. Nuestros asesores se comunicarán contigo pronto.</p>
+  </div>
+</div>
+
+<script>
+document.getElementById("form-contacto").addEventListener("submit", function(e){
+  e.preventDefault();
+  fetch(this.action, {
+    method: "POST",
+    body: new FormData(this)
+  }).then(response => {
+    if(response.ok){
+      document.getElementById("modal-exito").style.display = "block";
+      this.reset();
+    } else {
+      alert("Hubo un problema al enviar el formulario.");
+    }
+  }).catch(error => {
+    alert("Error de conexión. Intenta más tarde.");
+  });
+});
+
+function cerrarModalExito(){
+  document.getElementById("modal-exito").style.display = "none";
+}
+</script>
+
  
 
 
