@@ -109,8 +109,11 @@
 <section class="libro-reclamaciones">
   <h2>Libro de Reclamaciones (Ley 29571)</h2>
   <p>Conforme al Código de Protección y Defensa del Consumidor, este establecimiento cuenta con un Libro de Reclamaciones a su disposición.</p>
-
-  <form>
+  <form class="form-contacto" id="form-contacto" 
+        action="https://formsubmit.co/artesanowebb@gmail.com" 
+        method="POST" 
+        onsubmit="return validarFormulario()">
+  
     <fieldset>
       <legend>Datos Personales</legend>
 
@@ -188,7 +191,7 @@
     </div>
    
 
-
+<input type="hidden" name="_captcha" value="false">
     <button type="submit">ENVIAR</button>
   </form>
 </section>
