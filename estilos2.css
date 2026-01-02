@@ -862,114 +862,130 @@ nav a {
 
 
 /* 🔘 Botón flotante que abre el chatbot */
-/* 🔘 Botón flotante que abre el chatbot */
+
+/* 🔘 Botón flotante (mantiene tu estilo actual)chat bot   */
 #chat-toggle {
   position: fixed;
-  bottom: 50px;
-  right: 40px;
+  bottom: 140px;
+  right: 0px;
   background: transparent;
   border: none;
   z-index: 999;
   cursor: pointer;
+  width: 160px;
+  height: 160px;
+  transition: transform 0.2s ease; /* ← suaviza el efecto */
+  
+}
+/* efecto al pasar el cursor */
+#chat-toggle:hover {
+  transform: scale(1.1); /* ← agranda el botón */
+}
+
+
+#chat-toggle img {
   width: 80px;
   height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* 🖼️ Imagen dentro del botón del chatbot */
-#chat-toggle img {
-  width: 60px !important;
-  height: 60px !important;
   border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  box-shadow: 0 0 10px rgba(6, 6, 6, 0.3);
   transition: transform 0.2s ease;
-  object-fit: cover;
   cursor: pointer;
 }
+/* efecto al pasar el cursor sobre la imagen */
+#chat-toggle img:hover {
+  transform: scale(1.1);
+}
 
-
-
-
-/* 💬 Contenedor del chatbot que aparece al hacer clic */
+/* 💬 Contenedor del chatbot */
 #chatbot-container {
   position: fixed;
   bottom: 40px;
-  right: 220px; /* ← Lo alejamos del botón */
-  width: 300px;
+  right: 220px;
+  width: 400px;              /* 🔥 más ancho */
+  height: 500px;             /* 🔥 más alto */
   background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  font-family: sans-serif;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  font-family: 'Segoe UI', sans-serif;
   display: none;
   flex-direction: column;
   overflow: hidden;
   z-index: 998;
 }
 
-
-/* 🟪 Encabezado del chatbot */
+/* 🟪 Encabezado */
 #chat-header {
-  background: #6C63FF;     /* Color de fondo del encabezado */
-  color: white;            /* Texto blanco */
-  padding: 10px;           /* Espaciado interno */
-  font-weight: bold;       /* Texto en negrita */
+  background: #111;          /* negro premium */
+  color: #f5d142;            /* dorado elegante */
+  padding: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
 }
 
-/* 📜 Área donde se muestran los mensajes del chat */
+/* 📜 Área de mensajes */
 #chat-log {
-  padding: 10px;           /* Espaciado interno */
-  height: 200px;           /* Altura fija del área de mensajes */
-  overflow-y: auto;        /* Permite hacer scroll si hay muchos mensajes */
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  font-size: 15px;
+  line-height: 1.5;
 }
 
-/* 🧾 Área de entrada de texto y botón de envío */
+/* 🧾 Área de entrada */
 #chat-input {
-  display: flex;           /* Organiza el input y el botón en fila */
-  border-top: 1px solid #ccc; /* Línea divisoria superior */
+  display: flex;
+  border-top: 1px solid #ddd;
+  padding: 10px;
+  background: #fafafa;
 }
 
-/* ✏️ Campo donde el usuario escribe su pregunta */
 #chat-input input {
-  flex: 1;                 /* Ocupa todo el espacio disponible */
-  padding: 10px;           /* Espaciado interno */
-  border: none;            /* Sin borde */
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
 }
 
-/* 📤 Botón para enviar el mensaje */
 #chat-input button {
-  background: #6C63FF;     /* Color de fondo del botón */
-  color: white;            /* Texto blanco */
-  border: none;            /* Sin borde */
-  padding: 10px;           /* Espaciado interno */
-  cursor: pointer;         /* Cursor tipo mano al pasar el mouse */
-}     
-/* 🔘 Botón flotante que abre el chatbot */
-#chat-toggle {
-  position: fixed;
-  bottom: 200px;
-  right: 40px;
-  background: transparent;
+  margin-left: 10px;
+  padding: 10px 15px;
+  background: #f5d142;       /* dorado */
   border: none;
-  z-index: 999;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #111;
   cursor: pointer;
-  width: 160px;
-  height: 160px;
+  transition: 0.3s;
 }
 
-/* 🖼️ Imagen dentro del botón del chatbot */
-#chat-toggle img {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  transition: transform 0.2s ease;
-  cursor: pointer;
+#chat-input button:hover {
+  background: #e0c030;       /* dorado más oscuro al hover */
 }
 
+/* 🎯 Botones del menú */
+.chat-buttons {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
 
+.chat-buttons button {
+  flex: 1 1 45%;
+  padding: 10px;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
+.chat-buttons button:hover {
+  background: #333;
+}
 
 
 
@@ -1138,6 +1154,7 @@ nav a {
 
 
 /*
+
 
 /* Carrusel */
 #carousel {
@@ -2015,17 +2032,7 @@ nav a {
   }
 
 
-  #chat-toggle,
-  .whatsapp-fixed img {
-    width: 60px;
-    height: 60px;
-  }
 
-  #chatbot-container {
-    right: 10px;
-    bottom: 110px;
-    width: 90%;
-  }
 
   #review-text,
   #review-text1,
@@ -2198,6 +2205,36 @@ nav a {
     max-height: none;
   }
 }
+@media (max-width: 480px) {
+  #chat-toggle {
+    width: 60px;
+    height: 60px;
+    bottom: 120px;
+    right: 45px;
+  }
+
+  #chat-toggle img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .whatsapp-fixed {
+    bottom: 40px;
+    right: 15px;
+  }
+
+  .whatsapp-fixed img {
+    width: 60px;
+    height: 60px;
+  }
+
+  #chatbot-container {
+    width: 95%;
+    right: 2.5%;
+    height: 350px;
+    bottom: 140px;
+  }
+}
 
 @media screen and (max-width: 360px) {
   .mini-slider-img {
@@ -2217,5 +2254,6 @@ nav a {
     height: auto;
     max-height: none;
   }
+  
 }
 

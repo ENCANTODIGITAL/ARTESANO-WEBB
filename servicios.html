@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ENCANTO DIGITAL
+    <title>ArtesanoWebb
 
     </title>
     <link rel="stylesheet" href="estilos2.css">
@@ -50,7 +50,7 @@
 
 
 <section class="imagen-hero-servicios">
-  <img src="FOTOS/Imagen hero emociona.png" alt="Transformación digital elegante" class="imagen-hero">
+  <img src="FOTOS/serviiciosimagen.png" alt="Transformación digital elegante" class="imagen-hero">
   <p class="frase-hero">Cada servicio que ofrecemos está diseñado para emocionar, diferenciar y hacer crecer tu marca.</p>
   <hr class="separador-dorado">
 </section>
@@ -222,88 +222,156 @@
         <img src="FOTOS/robot.png" alt="Chat" id="chatbot-icon" />
 
     </button>
-      <!-- Contenedor del chatbot -->
-  <div id="chatbot-container">
-    <div id="chat-header">¿Tienes dudas?</div>
-    <div id="chat-log"></div>
-    <div id="chat-input">
-      <input type="text" id="userInput" placeholder="Escribe tu pregunta..." />
-      <button onclick="sendMessage()">Enviar</button>
-    </div>
+<div id="chatbot-container">
+  <div id="chat-header">🤖 ARTISTASWEBB - Tu asesor digital</div>
+  <div id="chat-log" style="overflow-y:auto; max-height:300px;"></div>
+  <div id="chat-input">
+    <input type="text" id="userInput" placeholder="Escribe tu pregunta..." />
+    <button onclick="sendMessage()">Enviar</button>
   </div>
+</div>
 
-  <script>
-  let chatOpened = false;
+<script>
+let chatOpened = false;
 
-  function toggleChat() {
-    const chat = document.getElementById("chatbot-container");
-    const isHidden = chat.style.display === "none";
-    chat.style.display = isHidden ? "flex" : "none";
+function toggleChat() {
+  const chat = document.getElementById("chatbot-container");
+  chat.style.display = chat.style.display === "none" ? "flex" : "none";
+  if (!chatOpened) {
+    showMainMenu();
+    chatOpened = true;
+  }
+}
 
-    if (isHidden && !chatOpened) {
-      showInitialOptions();
-      chatOpened = true;
-    }
+function showMainMenu() {
+  const log = document.getElementById("chat-log");
+  log.innerHTML += `<p><strong>Bot:</strong> 👋 ¡Bienvenido a ARTISTASWEBB! ¿Qué deseas conocer?</p>`;
+  log.innerHTML += renderMenu();
+}
+
+function renderMenu() {
+  return `
+    <div class="chat-buttons">
+      <button onclick="showSubMenu('planes')">💻 Planes y precios</button>
+      <button onclick="showSubMenu('tiempos')">⏱️ Tiempos de entrega</button>
+      <button onclick="showSubMenu('pagos')">💳 Pagos y facturación</button>
+      <button onclick="showSubMenu('confianza')">🔒 Confianza y garantías</button>
+      <button onclick="showSubMenu('soporte')">🛠️ Mantenimiento y soporte</button>
+      <button onclick="showSubMenu('contacto')">📞 Contacto directo</button>
+    </div>
+  `;
+}
+
+function showSubMenu(option) {
+  const log = document.getElementById("chat-log");
+  let content = "";
+
+  switch(option) {
+    case 'planes':
+      content = `
+        <p><strong>Bot:</strong> Tenemos 3 planes disponibles:</p>
+        <ul>
+          <li><strong>Básico:</strong> S/300, incluye dominio y hosting por 1 año.</li>
+          <li><strong>Medio:</strong> S/600, ideal para proyectos más completos.</li>
+          <li><strong>Premium:</strong> S/1200, con diseño avanzado y personalización total.</li>
+        </ul>
+        <button onclick="showMainMenu()">⬅️ Volver al menú</button>
+      `;
+      break;
+    case 'tiempos':
+      content = `
+        <p><strong>Bot:</strong> ⏳ Tiempos de entrega:</p>
+        <ul>
+          <li>Básico: 5 a 7 días</li>
+          <li>Medio: 9 a 15 días</li>
+          <li>Premium: 15 a 21 días</li>
+        </ul>
+        <button onclick="showMainMenu()">⬅️ Volver al menú</button>
+      `;
+      break;
+    case 'pagos':
+      content = `
+        <p><strong>Bot:</strong> 💳 Pagos y facturación:</p>
+        <ul>
+          <li>Pago único al terminar el trabajo</li>
+          <li>Boletas registradas en SUNAT</li>
+          <li>Dominio + hosting por 1 año</li>
+          <li>Renovación anual: S/50</li>
+        </ul>
+        <button onclick="showMainMenu()">⬅️ Volver al menú</button>
+      `;
+      break;
+    case 'confianza':
+      content = `
+        <p><strong>Bot:</strong> 🔒 Confianza y garantías:</p>
+        <ul>
+          <li>Registrados en SUNAT</li>
+          <li>Libros de reclamaciones habilitados</li>
+          <li>Entrega de credenciales completas</li>
+        </ul>
+        <button onclick="showMainMenu()">⬅️ Volver al menú</button>
+      `;
+      break;
+    case 'soporte':
+      content = `
+        <p><strong>Bot:</strong> 🛠️ Sí ofrecemos mantenimiento:</p>
+        <ul>
+          <li>Actualización de contenido</li>
+          <li>Diseño y mejoras técnicas</li>
+          <li>Descuentos para clientes frecuentes</li>
+        </ul>
+        <button onclick="showMainMenu()">⬅️ Volver al menú</button>
+      `;
+      break;
+    case 'contacto':
+      content = `
+        <p><strong>Bot:</strong> 📲 Escríbenos directamente:</p>
+        <a href="https://wa.me/51928856852?text=Hola%2C+quiero+información+de+mi+plan+web" target="_blank">WhatsApp</a>
+        <br>
+        <button onclick="showMainMenu()">⬅️ Volver al menú</button>
+      `;
+      break;
   }
 
-  function showInitialOptions() {
-    const log = document.getElementById("chat-log");
-    log.innerHTML += `<p><strong>Bot:</strong> ¡Hola! 👋 Soy el asistente virtual de ENCANTO DIGITAL. ¿En qué puedo ayudarte hoy?</p>`;
-    log.innerHTML += `
-      <div class="chat-buttons">
-        <button onclick="handleOption('precio')">💰 Ver precios</button>
-        <button onclick="handleOption('tiempo')">⏱️ Tiempo de entrega</button>
-        <button onclick="handleOption('tipos')">🎨 Tipos de invitaciones</button>
-        <button onclick="handleOption('decoracion')">🪄 Decoración personalizada</button>
-        <button onclick="handleOption('pedido')">📦 Hacer pedido</button>
-        <button onclick="handleOption('horario')">🕘 Horario</button>
-      </div>
-    `;
+  log.innerHTML += content;
+  log.scrollTop = log.scrollHeight;
+}
+
+function sendMessage() {
+  const input = document.getElementById("userInput").value.toLowerCase();
+  const log = document.getElementById("chat-log");
+  log.innerHTML += `<p><strong>Tú:</strong> ${input}</p>`;
+  document.getElementById("userInput").value = "";
+}
+function sendMessage() {
+  const input = document.getElementById("userInput").value.toLowerCase();
+  const log = document.getElementById("chat-log");
+  log.innerHTML += `<p><strong>Tú:</strong> ${input}</p>`;
+  document.getElementById("userInput").value = "";
+
+  let respuesta = "";
+
+  if (input.includes("precio") || input.includes("costo") || input.includes("plan") || input.includes("tarifa") || input.includes("cuánto")) {
+    respuesta = "Tenemos 3 planes: Básico S/300, Medio S/600 y Premium S/1200.";
+  } else if (input.includes("tiempo") || input.includes("entrega") || input.includes("días") || input.includes("plazo") || input.includes("demora") || input.includes("duración")) {
+    respuesta = "Los tiempos de entrega son: Básico 5-7 días, Medio 9-15 días, Premium 15-21 días.";
+  } else if (input.includes("pago") || input.includes("factura") || input.includes("boleta") || input.includes("recibo") || input.includes("cobro") || input.includes("sunat") || input.includes("renovación")) {
+    respuesta = "El pago es único al terminar el trabajo y emitimos boletas registradas en SUNAT.";
+  } else if (input.includes("horario") || input.includes("atencion") || input.includes("atienden") || input.includes("trabajan") || input.includes("abren") || input.includes("cierran")) {
+    respuesta = "Trabajamos de Lunes a Domingos de 9 AM a 7 PM.";
+  } else if (input.includes("garantía") || input.includes("seguridad") || input.includes("confianza") || input.includes("registrado") || input.includes("reclamo")) {
+    respuesta = "Estamos registrados en SUNAT, ofrecemos garantías y contamos con libro de reclamaciones.";
+  } else if (input.includes("soporte") || input.includes("mantenimiento") || input.includes("actualización") || input.includes("cambiar") || input.includes("mejorar") || input.includes("arreglar")) {
+    respuesta = "Sí ofrecemos mantenimiento: actualización de contenido, mejoras técnicas y descuentos para clientes frecuentes.";
+  } else if (input.includes("contacto") || input.includes("teléfono") || input.includes("whatsapp") || input.includes("hablar") || input.includes("escribir") || input.includes("comunicar")) {
+    respuesta = "Puedes escribirnos directamente por WhatsApp al +51 928856852.";
+  } else {
+    respuesta = "Lo siento, no entendí tu consulta. Usa los botones para más información.";
   }
 
-  function handleOption(option) {
-    let response = "";
-    switch(option) {
-      case 'precio':
-        response = "Nuestros precios van desde S/15 a S/20, según el diseño.";
-        break;
-      case 'tiempo':
-        response = "El tiempo de entrega es de 1 a 2 días hábiles.";
-        break;
-      case 'tipos':
-        response = "Ofrecemos invitaciones infantiles, para 15 años, bodas y eventos personalizados.";
-        break;
-      case 'decoracion':
-        response = "Sí, hacemos decoración a pedido para matrimonios y eventos especiales.";
-        break;
-      case 'pedido':
-        response = "Puedes escribirnos directamente por WhatsApp para atención personalizada.";
-        break;
-      case 'horario':
-        response = "Atendemos de lunes a sábado, de 9am a 6pm.";
-        break;
-      default:
-        response = "No entendí tu pregunta. ¿Puedes reformularla?";
-    }
-    const log = document.getElementById("chat-log");
-    log.innerHTML += `<p><strong>Bot:</strong> ${response}</p>`;
-    log.scrollTop = log.scrollHeight;
-  }
-
-  function sendMessage() {
-    const input = document.getElementById("userInput").value.toLowerCase();
-    const log = document.getElementById("chat-log");
-    log.innerHTML += `<p><strong>Tú:</strong> ${input}</p>`;
-    document.getElementById("userInput").value = "";
-
-    handleOption(input.includes("precio") ? "precio" :
-                 input.includes("tiempo") ? "tiempo" :
-                 input.includes("tipos") ? "tipos" :
-                 input.includes("decoracion") ? "decoracion" :
-                 input.includes("pedido") ? "pedido" :
-                 input.includes("horario") ? "horario" :
-                 "default");
-  }
+  log.innerHTML += `<p><strong>Bot:</strong> ${respuesta}</p>`;
+  log.scrollTop = log.scrollHeight;
+}
 </script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
