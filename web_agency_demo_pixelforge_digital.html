@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelForge Digital - Diseño Web Profesional y Demos Gratis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            blue: '#1e3a8a',
+                            accent: '#f97316',
+                            cyan: '#06b6d4',
+                            light: '#f8fafc'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-orange-500 selection:text-white">
+
+    <!-- Navbar Fija -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#inicio" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-900 to-indigo-600 flex items-center justify-center text-white shadow-md shadow-blue-900/20 group-hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-hammer text-lg"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-lg font-extrabold tracking-tight text-slate-900 leading-none">DiseñoWeb</span>
+                    <span class="text-xs font-semibold text-orange-500 tracking-wider uppercase mt-0.5">Express Peru</span>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                <a href="#inicio" class="hover:text-orange-500 transition-colors">Inicio</a>
+                <a href="#demos" class="hover:text-orange-500 transition-colors">Nuestros Demos</a>
+                <a href="#servicios" class="hover:text-orange-500 transition-colors">Servicios</a>
+                <a href="#proceso" class="hover:text-orange-500 transition-colors">Proceso</a>
+                <a href="#contacto" class="hover:text-orange-500 transition-colors">Contacto</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="hidden sm:flex items-center space-x-4">
+                <a href="#contacto" class="bg-gradient-to-r from-orange-500 to-amber-500 text-white font-semibold px-5 py-2.5 rounded-xl shadow-lg shadow-orange-500/25 hover:shadow-orange-500/40 hover:-translate-y-0.5 transition-all text-sm">
+                    Solicita tu Demo Gratis
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-slate-700 hover:text-orange-500 focus:outline-none p-2">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Modal -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-6 space-y-4 shadow-xl">
+            <a href="#inicio" class="block text-base font-medium text-slate-700 hover:text-orange-500">Inicio</a>
+            <a href="#demos" class="block text-base font-medium text-slate-700 hover:text-orange-500">Nuestros Demos</a>
+            <a href="#servicios" class="block text-base font-medium text-slate-700 hover:text-orange-500">Servicios</a>
+            <a href="#proceso" class="block text-base font-medium text-slate-700 hover:text-orange-500">Proceso</a>
+            <a href="#contacto" class="block text-base font-medium text-slate-700 hover:text-orange-500">Contacto</a>
+            <div class="pt-2">
+                <a href="#contacto" class="block text-center bg-orange-500 text-white font-semibold py-3 rounded-xl shadow-md">
+                    Solicita tu Demo Gratis
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden bg-gradient-to-b from-slate-100/60 to-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Text Column -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 bg-orange-100 border border-orange-200 text-orange-800 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide">
+                        <span class="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
+                        <span>¡VER TU WEB ANTES DE COMPRARLA!</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
+                        ¡TU WEB PROFESIONAL, HOY! <br class="hidden sm:inline">
+                        <span class="bg-gradient-to-r from-blue-900 to-indigo-700 bg-clip-text text-transparent">Diseño Web Rápido, Atractivo y Efectivo.</span>
+                    </h1>
+
+                    <p class="text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        Creamos experiencias digitales que venden. Simple. Eficiente. Para tu negocio. Te entregamos un <strong class="text-slate-900">DEMO interactivo GRATIS</strong> antes de empezar. Garantía de satisfacción total.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4 pt-2">
+                        <a href="#contacto" class="w-full sm:w-auto bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white text-center font-bold px-8 py-4 rounded-2xl shadow-xl shadow-orange-500/30 hover:shadow-orange-500/50 hover:-translate-y-1 transition-all duration-300">
+                            SOLICITA TU DEMO GRATIS <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                        <a href="#demos" class="w-full sm:w-auto bg-white hover:bg-slate-100 text-slate-700 font-semibold px-6 py-4 rounded-2xl border border-slate-200 shadow-sm transition-all text-center">
+                            Ver Ejemplos Reales
+                        </a>
+                    </div>
+
+                    <!-- Trust badges -->
+                    <div class="pt-6 flex items-center justify-center lg:justify-start space-x-6 text-slate-500 text-xs font-medium">
+                        <div class="flex items-center space-x-1.5">
+                            <i class="fa-solid fa-circle-check text-emerald-500 text-sm"></i>
+                            <span>Sin pagos adelantados</span>
+                        </div>
+                        <div class="flex items-center space-x-1.5">
+                            <i class="fa-solid fa-circle-check text-emerald-500 text-sm"></i>
+                            <span>Entrega express en 5 días</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Mockup Visual Column -->
+                <div class="lg:col-span-5 relative flex justify-center">
+                    <!-- Background decorative glow -->
+                    <div class="absolute -inset-4 bg-gradient-to-r from-orange-500/10 to-blue-600/10 rounded-3xl blur-2xl -z-10"></div>
+                    
+                    <!-- Laptop & Smartphone Mockup Container -->
+                    <div class="relative w-full max-w-lg">
+                        <!-- Laptop Frame -->
+                        <div class="bg-slate-900 rounded-2xl p-2.5 shadow-2xl border border-slate-800">
+                            <div class="bg-slate-950 rounded-lg overflow-hidden aspect-[16/10] relative flex flex-col">
+                                <!-- Browser Bar -->
+                                <div class="bg-slate-900 px-3 py-2 flex items-center space-x-2 border-b border-slate-800">
+                                    <div class="flex space-x-1.5">
+                                        <div class="w-2.5 h-2.5 rounded-full bg-rose-500"></div>
+                                        <div class="w-2.5 h-2.5 rounded-full bg-amber-500"></div>
+                                        <div class="w-2.5 h-2.5 rounded-full bg-emerald-500"></div>
+                                    </div>
+                                    <div class="bg-slate-800 text-slate-400 text-[10px] px-3 py-0.5 rounded-md flex-1 text-center font-mono">
+                                        demo.pixelforgedigital.com/negocio
+                                    </div>
+                                </div>
+                                <!-- Mockup Screen Content -->
+                                <div class="flex-1 bg-gradient-to-br from-amber-900/40 via-slate-900 to-slate-950 p-4 flex flex-col justify-between relative overflow-hidden">
+                                    <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#f97316_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                                    <div class="flex justify-between items-center z-10">
+                                        <span class="text-white font-bold text-xs tracking-wider">Café Aroma</span>
+                                        <div class="flex space-x-2 text-[9px] text-slate-300">
+                                            <span>Menú</span>
+                                            <span>Ubicación</span>
+                                            <span class="text-orange-400 font-bold">¡Pide Ya!</span>
+                                        </div>
+                                    </div>
+                                    <div class="my-auto text-center space-y-2 z-10">
+                                        <span class="inline-block bg-orange-500/20 text-orange-400 text-[9px] font-semibold px-2 py-0.5 rounded-full border border-orange-500/30">DEMO INTERACTIVO</span>
+                                        <h3 class="text-white font-bold text-sm">Tu Nuevo Negocio en Internet</h3>
+                                        <p class="text-[10px] text-slate-300 max-w-[200px] mx-auto">Diseño a la medida adaptado para captar clientes en Google y WhatsApp.</p>
+                                    </div>
+                                    <div class="z-10 text-center">
+                                        <span class="bg-orange-500 text-white font-semibold text-[9px] px-3 py-1 rounded-md shadow">Solicitar Demo Similar</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Laptop Base -->
+                        <div class="relative mx-auto bg-slate-300 h-3 rounded-b-xl w-4/5 shadow-md flex justify-center items-center">
+                            <div class="w-16 h-1 bg-slate-400 rounded-full"></div>
+                        </div>
+
+                        <!-- Smartphone Floating Frame -->
+                        <div class="absolute -bottom-6 -left-4 sm:-left-8 w-28 sm:w-32 bg-slate-900 rounded-2xl p-1.5 shadow-2xl border border-slate-800 z-20">
+                            <div class="bg-slate-950 rounded-xl overflow-hidden aspect-[9/18] relative flex flex-col">
+                                <div class="absolute top-1 left-1/2 -translate-x-1/2 w-8 h-2 bg-slate-900 rounded-full z-20"></div>
+                                <div class="flex-1 bg-gradient-to-b from-blue-950 to-slate-900 p-2 text-center flex flex-col justify-center items-center relative">
+                                    <i class="fa-solid fa-mobile-screen-button text-cyan-400 text-xl mb-1"></i>
+                                    <span class="text-[9px] text-white font-bold">100% Responsivo</span>
+                                    <span class="text-[7px] text-slate-400 mt-0.5">Optimizado para celulares</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Nuestro Enfoque Simple -->
+    <section id="proceso" class="py-20 bg-white border-y border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-3 mb-16">
+                <span class="text-orange-500 font-bold uppercase text-xs tracking-widest bg-orange-50 px-3 py-1 rounded-full border border-orange-100">CERO RIESGO</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">NUESTRO ENFOQUE SIMPLE</h2>
+                <p class="text-slate-600 text-base">Queremos que te sientas 100% seguro antes de invertir. Así es como trabajamos:</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200/80 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                    <div class="w-14 h-14 rounded-2xl bg-orange-100 text-orange-600 flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-orange-500 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <span class="text-xs font-bold text-orange-500 uppercase tracking-wider">Paso 01</span>
+                    <h3 class="text-xl font-bold text-slate-900 mt-1 mb-3">1. DISEÑO INICIAL</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Cuéntanos de tu negocio. Creamos un mockup visual y un demo previo personalizado para que veas el estilo y la calidad antes de iniciar.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200/80 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                    <div class="w-14 h-14 rounded-2xl bg-blue-100 text-blue-700 flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-file-circle-check"></i>
+                    </div>
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">Paso 02</span>
+                    <h3 class="text-xl font-bold text-slate-900 mt-1 mb-3">2. TU APROBACIÓN</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Revisas el demo interactivo. Si te encanta el diseño y cumple con lo que imaginas, damos luz verde al desarrollo completo.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200/80 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider">Paso 03</span>
+                    <h3 class="text-xl font-bold text-slate-900 mt-1 mb-3">3. DESARROLLO FINAL</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Construimos tu web final optimizada para buscadores, con velocidad rápida y lista para generar ventas y resultados medibles.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- Sección Nuestros Demos / Portafolio -->
+    <section id="demos" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-3 mb-16">
+                <span class="text-cyan-600 font-bold uppercase text-xs tracking-widest bg-cyan-50 px-3 py-1 rounded-full border border-cyan-100">INSPIRACIÓN</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Nuestros Demos Recientes</h2>
+                <p class="text-slate-600 text-base">Ejemplos reales de cómo podría verse tu próximo sitio web corporativo o de servicios.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Demo Item 1: Inmobiliaria -->
+                <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+                    <a href="https://encantodigital.github.io/empresainmobiliaria/" target="_blank" rel="noopener noreferrer" class="h-48 relative overflow-hidden group block bg-slate-900">
+                        <!-- Reemplaza 'ruta-de-tu-imagen-inmobiliaria.jpg' por el enlace o nombre de tu imagen -->
+                        <img src="empresainmobiliaria.png" alt="Demo Inmobiliaria" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent"></div>
+                        <div class="absolute bottom-3 left-4 right-4 text-white z-10 flex justify-between items-end">
+                            <div>
+                                <span class="bg-orange-500/90 text-white text-[9px] font-bold px-2 py-0.5 rounded uppercase">Inmobiliaria</span>
+                                <h4 class="text-base font-bold mt-1">Casas & Alquileres</h4>
+                            </div>
+                            <span class="text-xs bg-white/20 backdrop-blur-md px-2 py-1 rounded-lg"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                        </div>
+                    </a>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <p class="text-slate-600 text-sm">Plataforma especializada en exhibición de casas en venta y propiedades en alquiler con filtros y contacto directo.</p>
+                        
+                        <div class="space-y-3 pt-2 border-t border-slate-100">
+                            <a href="https://encantodigital.github.io/empresainmobiliaria/" target="_blank" rel="noopener noreferrer" class="w-full bg-slate-900 hover:bg-orange-500 text-white font-semibold py-2.5 px-4 rounded-xl text-xs text-center transition-colors flex items-center justify-center space-x-2">
+                                <i class="fa-solid fa-eye"></i>
+                                <span>Ver Demo en Vivo</span>
+                            </a>
+                            <div class="flex items-center justify-between">
+                                <span class="text-[11px] font-semibold text-emerald-600"><i class="fa-solid fa-circle text-[8px] mr-1"></i> Disponible</span>
+                                <a href="#contacto" class="text-xs font-bold text-orange-500 hover:text-orange-600">Solicitar similar <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Demo Item 2: Joaquín Fletes (Transporte) -->
+                <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+                    <a href="https://encantodigital.github.io/JOAQUINFLETES/" target="_blank" rel="noopener noreferrer" class="h-48 relative overflow-hidden group block bg-slate-900">
+                        <!-- Reemplaza 'ruta-de-tu-imagen-fletes.jpg' por tu imagen -->
+                        <img src="Captura de pantalla 2026-10-13 131034.png" alt="Demo Joaquín Fletes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent"></div>
+                        <div class="absolute bottom-3 left-4 right-4 text-white z-10 flex justify-between items-end">
+                            <div>
+                                <span class="bg-blue-600/90 text-white text-[9px] font-bold px-2 py-0.5 rounded uppercase">Transporte</span>
+                                <h4 class="text-base font-bold mt-1">Joaquín Fletes</h4>
+                            </div>
+                            <span class="text-xs bg-white/20 backdrop-blur-md px-2 py-1 rounded-lg"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                        </div>
+                    </a>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <p class="text-slate-600 text-sm">Empresa de transporte de carga pesada y fletes a nivel nacional con cotizaciones rápidas y cobertura total.</p>
+                        
+                        <div class="space-y-3 pt-2 border-t border-slate-100">
+                            <a href="https://encantodigital.github.io/JOAQUINFLETES/" target="_blank" rel="noopener noreferrer" class="w-full bg-slate-900 hover:bg-orange-500 text-white font-semibold py-2.5 px-4 rounded-xl text-xs text-center transition-colors flex items-center justify-center space-x-2">
+                                <i class="fa-solid fa-eye"></i>
+                                <span>Ver Demo en Vivo</span>
+                            </a>
+                            <div class="flex items-center justify-between">
+                                <span class="text-[11px] font-semibold text-emerald-600"><i class="fa-solid fa-circle text-[8px] mr-1"></i> Disponible</span>
+                                <a href="#contacto" class="text-xs font-bold text-orange-500 hover:text-orange-600">Solicitar similar <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Demo Item 3: Rioplast (Riego Agrícola) -->
+                <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+                    <a href="https://encantodigital.github.io/rioplast/" target="_blank" rel="noopener noreferrer" class="h-48 relative overflow-hidden group block bg-slate-900">
+                        <!-- Reemplaza 'ruta-de-tu-imagen-rioplast.jpg' por tu imagen -->
+                        <img src="rioplast.png" alt="Demo Rioplast" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent"></div>
+                        <div class="absolute bottom-3 left-4 right-4 text-white z-10 flex justify-between items-end">
+                            <div>
+                                <span class="bg-teal-600/90 text-white text-[9px] font-bold px-2 py-0.5 rounded uppercase">Agricultura</span>
+                                <h4 class="text-base font-bold mt-1">Rioplast</h4>
+                            </div>
+                            <span class="text-xs bg-white/20 backdrop-blur-md px-2 py-1 rounded-lg"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                        </div>
+                    </a>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <p class="text-slate-600 text-sm">Fabricación de productos para riego agrícola: aspersores, mangueras y bandejas de germinación de alta calidad.</p>
+                        
+                        <div class="space-y-3 pt-2 border-t border-slate-100">
+                            <a href="https://encantodigital.github.io/rioplast/" target="_blank" rel="noopener noreferrer" class="w-full bg-slate-900 hover:bg-orange-500 text-white font-semibold py-2.5 px-4 rounded-xl text-xs text-center transition-colors flex items-center justify-center space-x-2">
+                                <i class="fa-solid fa-eye"></i>
+                                <span>Ver Demo en Vivo</span>
+                            </a>
+                            <div class="flex items-center justify-between">
+                                <span class="text-[11px] font-semibold text-emerald-600"><i class="fa-solid fa-circle text-[8px] mr-1"></i> Disponible</span>
+                                <a href="#contacto" class="text-xs font-bold text-orange-500 hover:text-orange-600">Solicitar similar <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Sección de Servicios Breve -->
+    <section id="servicios" class="py-20 bg-white border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <span class="text-orange-500 font-bold uppercase text-xs tracking-widest bg-orange-50 px-3 py-1 rounded-full border border-orange-100">LO QUE HACEMOS</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Páginas web diseñadas para generar resultados reales</h2>
+                    <p class="text-slate-600 text-base leading-relaxed">
+                        No solo hacemos webs bonitas; creamos herramientas comerciales rápidas y optimizadas que convierten visitantes en clientes fieles a través de WhatsApp.
+                    </p>
+                    <ul class="space-y-3.5 text-slate-700 text-sm font-medium">
+                        <li class="flex items-center space-x-3">
+                            <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs"><i class="fa-solid fa-check"></i></div>
+                            <span>Diseño responsivo adaptado perfectamente a Celulares, Tablets y PCs</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs"><i class="fa-solid fa-check"></i></div>
+                            <span>Optimización de velocidad extrema para posicionar en Google</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs"><i class="fa-solid fa-check"></i></div>
+                            <span>Botón de contacto directo por WhatsApp flotante</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs"><i class="fa-solid fa-check"></i></div>
+                            <span>Hosting y Dominio incluidos el primer año</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Quick Banner Card -->
+                <div class="bg-gradient-to-br from-slate-900 to-indigo-950 rounded-3xl p-8 lg:p-10 text-white shadow-2xl relative overflow-hidden">
+                    <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-orange-500/20 rounded-full blur-3xl pointer-events-none"></div>
+                    <h3 class="text-2xl font-bold mb-4">¿Listo para dar el salto digital?</h3>
+                    <p class="text-slate-300 text-sm mb-6 leading-relaxed">Recuerda: No pagas nada hasta que veas y apruebes el demo interactivo de tu nuevo negocio.</p>
+                    <a href="#contacto" class="inline-flex items-center justify-center bg-orange-500 hover:bg-orange-600 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg transition-all w-full text-center">
+                        Solicitar mi Demo Gratis Ahora <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto e Interacción Formulario de Demo -->
+    <section id="contacto" class="py-20 bg-slate-900 text-white relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="bg-slate-800/80 border border-slate-700/80 rounded-3xl p-8 sm:p-12 shadow-2xl backdrop-blur-xl">
+                <div class="text-center max-w-xl mx-auto space-y-3 mb-10">
+                    <span class="text-orange-400 font-bold uppercase text-xs tracking-widest bg-orange-500/10 px-3 py-1 rounded-full border border-orange-500/20">COMENCEMOS HOY</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Solicita tu Demo Gratis</h2>
+                    <p class="text-slate-300 text-sm">Ingresa tus datos y te enviaremos una propuesta de demo interactiva para tu negocio sin compromiso.</p>
+                </div>
+
+                <!-- Formulario Interactivo -->
+                <form id="demo-form" class="space-y-6" onsubmit="handleFormSubmit(event)">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300">Tu Nombre</label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 pl-4 flex items-center text-slate-400"><i class="fa-solid fa-user"></i></span>
+                                <input type="text" id="nombre" required placeholder="Ej. Carlos Mendoza" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3.5 pl-11 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-orange-500 transition-colors">
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300">Número de WhatsApp</label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 pl-4 flex items-center text-slate-400"><i class="fa-brands fa-whatsapp"></i></span>
+                                <input type="tel" id="whatsapp" required placeholder="Ej. +51 987 654 321" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3.5 pl-11 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-orange-500 transition-colors">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300">¿Qué tipo de negocio tienes?</label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 pl-4 flex items-center text-slate-400"><i class="fa-solid fa-briefcase"></i></span>
+                            <input type="text" id="negocio" required placeholder="Ej. Clínica Dental, Restaurante, Abogados, Tienda de Ropa..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3.5 pl-11 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-orange-500 transition-colors">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="w-full bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-bold py-4 rounded-xl shadow-lg shadow-orange-500/25 transition-all text-base">
+                        ¡QUIERO MI DEMO GRATIS AHORA! <i class="fa-solid fa-paper-plane ml-2"></i>
+                    </button>
+                </form>
+
+                <!-- Success Message Box (Hidden by default) -->
+                <div id="success-box" class="hidden mt-8 bg-emerald-500/10 border border-emerald-500/30 rounded-2xl p-6 text-center space-y-3 animate-fade-in">
+                    <div class="w-12 h-12 rounded-full bg-emerald-500 text-white flex items-center justify-center mx-auto text-xl font-bold shadow-lg shadow-emerald-500/30">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-emerald-400">¡Solicitud Enviada con Éxito!</h4>
+                    <p class="text-slate-300 text-sm max-w-md mx-auto">
+                        Hemos recibido la información de tu negocio. Nuestro equipo creativo comenzará a preparar tu demo interactivo gratuito y te contactará por WhatsApp muy pronto.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 rounded-lg bg-orange-500 flex items-center justify-center text-white font-bold">
+                    <i class="fa-solid fa-hammer text-xs"></i>
+                </div>
+                <span class="text-white font-bold tracking-tight">DiseñoWeb Express Peru</span>
+            </div>
+
+            <div class="text-xs text-slate-500 text-center md:text-left">
+                © 2026 DiseñoWeb Express Peru. Todos los derechos reservados. Creamos tu futuro digital.
+            </div>
+
+            <div class="flex space-x-4 text-slate-400 text-sm">
+                <!-- Instagram -->
+                <a href="https://instagram.com/diseno_webexpressperu?dlrf=bDV2MHQzMjZqNWl3" target="_blank" rel="noopener noreferrer" class="hover:text-orange-500 transition-colors" title="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                
+                <!-- TikTok (Corregido a fa-tiktok) -->
+                <a href="<!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 rounded-lg bg-orange-500 flex items-center justify-center text-white font-bold">
+                    <i class="fa-solid fa-hammer text-xs"></i>
+                </div>
+                <span class="text-white font-bold tracking-tight">DiseñoWeb Express Peru</span>
+            </div>
+
+            <div class="text-xs text-slate-500 text-center md:text-left">
+                © 2026 DiseñoWeb Express Peru. Todos los derechos reservados. Creamos tu futuro digital.
+            </div>
+
+            <div class="flex space-x-4 text-slate-400 text-sm">
+                <!-- Instagram -->
+                <a href="https://instagram.com/diseno_webexpressperu?dlrf=bDV2MHQzMjZqNWl3" target="_blank" rel="noopener noreferrer" class="hover:text-orange-500 transition-colors" title="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                
+                <!-- TikTok (Corregido a fa-tiktok) -->
+                <a href="https://www.tiktok.com/@artesanowebb?_r=1&_t=ZS-9AWgbPpdc5W" target="_blank" rel="noopener noreferrer" class="hover:text-orange-500 transition-colors" title="TikTok">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+                
+                <!-- WhatsApp -->
+                <a href="https://wa.me/51928856852" target="_blank" rel="noopener noreferrer" class="hover:text-orange-500 transition-colors" title="WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </footer>" target="_blank" rel="noopener noreferrer" class="hover:text-orange-500 transition-colors" title="TikTok">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+                
+                <!-- WhatsApp -->
+                <a href="https://wa.me/51987654321" target="_blank" rel="noopener noreferrer" class="hover:text-orange-500 transition-colors" title="WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Code -->
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Form Submission Handler with simulated success message (no alerts)
+
+        
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            const nombre = document.getElementById('nombre').value;
+            const whatsapp = document.getElementById('whatsapp').value;
+            const negocio = document.getElementById('negocio').value;
+            
+            // Tu número de WhatsApp al que quieres que llegue el mensaje (con código de país, ej: 51987654321)
+            const tuNumeroWhatsApp = "51928856852"; 
+            
+            // Crear el mensaje formateado
+            const mensaje = `Hola, quiero solicitar mi demo gratis.%0A%0A*Nombre:* ${nombre}%0A*WhatsApp:* ${whatsapp}%0A*Negocio:* ${negocio}`;
+            
+            // Abrir WhatsApp con los datos listos
+            window.open(`https://wa.me/${tuNumeroWhatsApp}?text=${mensaje}`, '_blank');
+            
+            // Mostrar caja de éxito en la web
+            const form = document.getElementById('demo-form');
+            const successBox = document.getElementById('success-box');
+            form.style.display = 'none';
+            successBox.classList.remove('hidden');
+            successBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+    </script>
+</body>
+</html>
